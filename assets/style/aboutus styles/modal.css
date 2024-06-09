@@ -1,0 +1,50 @@
+.modal-open::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(90, 90, 90, 0.159);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+.modal {
+  position: fixed;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  right: 50%;
+  transform: translatex(50%);
+  z-index: 1000;
+  padding: 20px;
+  width: 800px;
+}
+.modal-container {
+  display: flex;
+  border: 1px solid #cfb62c;
+  padding: 30px;
+  gap: 40px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.modal-container > div > img {
+  height: 200px;
+  height: 200px;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.name-cont {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+.name-cont p {
+  margin-bottom: 10px;
+}
+.description {
+  font-size: 0.7rem;
+  line-height: 25px;
+}

@@ -1,0 +1,51 @@
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 70px;
+  position: relative;
+}
+.description-container {
+  width: 55%;
+  height: 697px;
+  background-color: #f7f7f7;
+  padding: 35px 50px;
+}
+.description-container h1 {
+  margin-bottom: 20px;
+}
+.more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.more p {
+  font-size: 0.9rem;
+}
+
+.aboutus-text {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.text-cont {
+  line-height: 30px;
+  width: 50%;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+.logo-img {
+  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  position: absolute;
+  left: 35%;
+  bottom: 44%;
+}
+.arrrow-btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}

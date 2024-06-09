@@ -1,0 +1,151 @@
+body {
+  background-color: black;
+  width: 100vw;
+}
+header {
+  width: 90%;
+  margin: auto;
+  color: white;
+}
+.bi-list {
+  color: #cfb62c;
+  font-size: 2rem;
+}
+.header-wrapper {
+  display: flex;
+}
+.header-description {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 40px;
+}
+.header-description a {
+  text-decoration: none;
+  color: white;
+}
+.bi-search {
+  color: #cfb62c;
+  font-size: 1.2rem;
+}
+.header-border {
+  width: 950px;
+  border-bottom: 1px solid #cfb62c;
+  margin-bottom: 20px;
+}
+.frame img {
+  display: flex;
+  width: 100%;
+}
+.contact-us {
+  color: white;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 20px;
+  width: 40%;
+}
+.header-contact h2 {
+  color: #d6bb2c;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.h {
+  color: #d6bb2c;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.border {
+  border-left: 1px solid #d6bb2c;
+  border-right: 1px solid #d6bb2c;
+  padding: 60px;
+}
+.h2 {
+  color: #d6bb2c;
+  margin: 10px 0;
+}
+.header-contact div {
+  line-height: 20px;
+}
+.form-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding: 10px 5px;
+  width: 400px;
+  margin: 15px 0;
+  background-color: #171717;
+}
+textarea {
+  background-color: #171717;
+  width: 400px;
+  margin: 15px 0;
+}
+#submit {
+  color: white;
+  border: 1px solid rgb(102, 102, 102);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.submit-cont {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+.map {
+  width: 100%;
+  margin: 80px 0;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.brand {
+  width: 120px;
+  height: 140px;
+}
+.footer-deatail {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 100%;
+  margin: auto;
+}
+.media-border {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+  order: 0;
+}
+.footer-text {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  gap: 10px;
+  margin-top: 15px;
+  color: white;
+}

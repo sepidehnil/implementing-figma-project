@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "IranianSans";
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "IranianSans";
+  src: url("../font/IranianSans.ttf ");
+  font-weight: normal;
+  font-style: normal;
+}
