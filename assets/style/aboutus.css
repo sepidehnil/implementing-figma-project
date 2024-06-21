@@ -2,19 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: auto;
   height: 100vh;
-  width: 100vw;
   gap: 70px;
-  position: relative;
 }
 .description-container {
   width: 55%;
-  height: 697px;
   background-color: #f7f7f7;
   padding: 35px 50px;
+  position: relative;
 }
 .description-container h1 {
   margin-bottom: 20px;
+}
+.right-bordr h1 {
+  font-size: 22px;
 }
 .more {
   display: flex;
@@ -24,7 +27,6 @@
 .more p {
   font-size: 0.9rem;
 }
-
 .aboutus-text {
   display: flex;
   gap: 40px;
@@ -36,16 +38,78 @@
   font-size: 0.9rem;
   text-align: justify;
 }
-.logo-img {
+.img-cont {
+  position: absolute;
+  background-color: white;
+  width: 113px;
+  height: 113px;
   border-radius: 50%;
+  left: 41%;
+}
+.logo-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 106px;
   height: 106px;
-  position: absolute;
-  left: 35%;
-  bottom: 44%;
 }
 .arrrow-btn {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+}
+.swiper {
+  width: 35%;
+  height: 412px;
+}
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-next {
+  width: 81.794px;
+  height: 36px;
+  border-radius: 15px 0px 0px 15px;
+  background: rgba(207, 182, 44, 0.49);
+}
+.about-prev {
+  width: 81.794px;
+  height: 36px;
+  border-radius: 0px 15px 15px 0px;
+  background: rgba(207, 182, 44, 0.49);
+}
+@media only screen and (max-width: 680px) {
+  .swiper-mobile {
+    width: 100%;
+  }
+  .img-cont {
+    display: none;
+  }
+  .logo-img {
+    display: none;
+  }
+  .description-container {
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .text-cont-mobile {
+    display: none;
+  }
+  .text-cont-mobile2 {
+    width: 100%;
+  }
+  .about-us {
+    flex-direction: column;
+    gap: 0;
+  }
 }

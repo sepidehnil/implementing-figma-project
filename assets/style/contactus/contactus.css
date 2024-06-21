@@ -149,3 +149,8 @@ textarea {
   margin-top: 15px;
   color: white;
 }
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

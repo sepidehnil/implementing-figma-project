@@ -1,66 +1,118 @@
-.sidebar-open::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(90, 90, 90, 0.159);
-  backdrop-filter: blur(4px);
-  z-index: 999;
-}
 .sidebar {
   position: fixed;
-  width: 350px;
-  height: 100%;
+  width: 268px;
+  height: 100vh;
   background-color: white;
   top: 0;
   right: 0;
-  font-family: IranSans;
-  z-index: 1000;
+  font-family: IranianSans;
+  box-shadow: 6px 8px 17.9px 0px rgba(139, 139, 139, 0.25);
+  overflow: hidden;
+  z-index: 100;
 }
 .sidebar-wrapper {
-  padding: 15px 30px;
-}
-.bi-x-lg {
-  font-size: 1.6rem;
-  color: #cfb62c;
-  font-weight: bold;
+  padding: 27px;
 }
 .sidebar-items {
-  margin: 120px 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 28px;
+  font-weight: bold;
+  font-size: 14px;
   font-weight: bold;
   border-right: 1px solid #c4c4c4;
-  padding: 0 20px;
+  padding-right: 7px;
+  margin: 122px 0;
+  cursor: pointer;
 }
 .sidebar-items a {
   text-decoration: none;
   color: black;
 }
-.sidebar-socialmedia {
-  display: flex;
-  gap: 40px;
-  justify-content: left;
+.sidebar-items p:hover {
   color: #cfb62c;
 }
+.sidebar-socialmedia {
+  display: flex;
+  gap: 8px;
+  color: #cfb62c;
+  margin: 0;
+}
 .social {
+  display: flex;
   border: 2px solid #cfb62c;
   border-radius: 50%;
-  padding: 8px;
+  padding: 7px;
+  margin-bottom: 0;
 }
 .sidebar-links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  text-align: left;
-  margin-top: 20px;
+  align-items: flex-end;
+  gap: 14px;
   border-left: 1px solid #c4c4c4;
-  padding: 0 20px;
+  padding: 0 9px;
 }
-.bi-linkedin {
-  order: 1;
+.sidebar-links p {
+  color: #c4c4c4;
+  font-size: 12px;
+  font-weight: 400;
 }
-.bi-telephone-fill {
-  order: -1;
+.sidebar-links a {
+  text-decoration: none;
+}
+.sidebar-links p:hover {
+  color: #cfb62c;
+}
+.menu-list {
+  cursor: pointer;
+}
+.closebtn {
+  cursor: pointer;
+}
+.mobile-size-cont {
+  display: none;
+}
+#close {
+  display: flex;
+}
+@media only screen and (max-width: 680px) {
+  .sidebar {
+    width: 100vw;
+    height: 100vh;
+  }
+  .sidebar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 122px;
+    margin-bottom: 74px;
+    cursor: pointer;
+    border: none;
+  }
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    border: none;
+    padding: 0 9px;
+  }
+  .mobile-size-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #close {
+    display: none;
+  }
+  .mobile-size-cont div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 }

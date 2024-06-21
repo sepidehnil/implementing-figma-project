@@ -3,11 +3,24 @@
   padding: 0px;
   margin: 0px;
   font-family: "IranianSans";
-  overflow-x: hidden;
 }
 @font-face {
   font-family: "IranianSans";
-  src: url("../font/IranianSans.ttf ");
-  font-weight: normal;
+  src: url("../font/IRANSansWeb(FaNum).ttf ");
+  font-style: normal;
+}
+@font-face {
+  font-family: "italiana";
+  src: url("../font/Italiana-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "telugu";
+  src: url("../font/Telugu MN.ttc");
+  font-style: normal;
+}
+@font-face {
+  font-family: "anton";
+  src: url("../font/Anton-Regular.ttf");
   font-style: normal;
 }

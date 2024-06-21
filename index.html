@@ -11,48 +11,69 @@
     <link rel="stylesheet" href="/assets/style/retailshow.css" />
     <link rel="stylesheet" href="/assets/style/retailawards.css" />
     <link rel="stylesheet" href="/assets/style/mahnameh.css" />
+    <link rel="stylesheet" href="./assets/style/cricle.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <title>ui design</title>
   </head>
   <body>
     <section class="homepage-section">
       <header>
-        <div class="header-wrapper">
+        <div class="description-wrapper">
           <div class="header-description">
-            <i class="bi bi-list" onclick="togglemenu()"></i>
+            <img
+              src="./assets/svg/menu-list.svg"
+              onclick="togglemenu()"
+              class="menu-list"
+            />
             <a href="./html/aboutus.html">
               <p>درباره ما</p>
             </a>
             <p>ایران ریتیل شو</p>
             <p>ایران ریتیل اواردز</p>
             <p>پایگاه خبری</p>
+            <p>ماهنامه تجارت طلایی</p>
             <a href="./html/contactus.html">
               <p>تماس با ما</p>
             </a>
-            <p>ماهنامه تجارت طلایی</p>
-            <i class="bi bi-search"></i>
-          </div>
-          <a href="http://127.0.0.1:5500/index.html">
             <img
-              src="./assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
-              alt="brand-logo"
-              class="brand-logo"
+              src="./assets/svg/search2.svg"
+              onclick="toggleSearch()"
+              id="toggleSearch"
             />
-          </a>
+          </div>
         </div>
+        <a href="http://127.0.0.1:5500/index.html">
+          <img
+            src="./assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
+            alt="brand-logo"
+            class="brand-logo"
+          />
+        </a>
       </header>
-
-      <div class="header-border"></div>
 
       <div class="homepage-text">
         <p class="homepage-text1">GOLDEN BUSINESS</p>
         <p class="homepage-text2">دروازه ای به بازار جهانی</p>
+        <div class="slider">
+          <img src="./assets/svg/slider.svg" />
+          <img src="./assets/svg/slider.svg" />
+        </div>
       </div>
 
+      <div class="search"></div>
+
       <div id="sidebar-container"></div>
+
+      <video class="video-background" autoplay loop muted playsinline>
+        <source src="./assets/image/تیزر صفحه نخست.mp4" type="video/mp4" />
+      </video>
     </section>
 
     <section class="news">
@@ -60,8 +81,8 @@
       <div class="news-wrapper">
         <div class="firstnews-container">
           <div class="firstnews-text">
-            <img src="./assets/image/4 (1).png" />
-            <h3 class="text1">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
+            <p class="text">1.</p>
+            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
             <p class="text2">12 بهمن ماه 1402</p>
             <p class="text2">
               مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
@@ -71,23 +92,27 @@
               رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
             </p>
             <div class="news-link">
-              <img src="./assets/image/Screenshot 2024-05-22 062543.png" />
+              <div class="gray-logo">
+                <img src="./assets/svg/brand-logo-gray.svg" />
+              </div>
               <a href="https://www.news.ir/">
                 <p>www.news.ir</p>
               </a>
             </div>
           </div>
-          <a href="https://www.news.ir/">
-            <img
-              src="./assets/image/129-costco-site-size-2 1 (1).png"
-              class="news-img"
-            />
-          </a>
+          <div class="news-img">
+            <a href="https://www.news.ir/">
+              <img
+                src="./assets/image/129-costco-site-size-2 1 (1).png"
+                -cont
+              />
+            </a>
+          </div>
         </div>
-        <div class="secondnews-container">
-          <div class="firstnews-text">
-            <img src="./assets/image/4 (1).png" />
-            <h3 class="text1">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
+        <div class="second-container">
+          <div class="second-text">
+            <p class="text">2.</p>
+            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
             <p class="text2">12 بهمن ماه 1402</p>
             <p class="text2">
               مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
@@ -97,23 +122,27 @@
               رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
             </p>
             <div class="news-link">
-              <img src="./assets/image/Screenshot 2024-05-22 062543.png" />
+              <div class="gray-logo">
+                <img src="./assets/svg/brand-logo-gray.svg" />
+              </div>
               <a href="https://www.news.ir/">
                 <p>www.news.ir</p>
               </a>
             </div>
           </div>
-          <a href="https://www.news.ir/">
-            <img
-              src="./assets/image/129-costco-site-size-2 1.png"
-              class="news-img"
-            />
-          </a>
+          <div class="news-img">
+            <a href="https://www.news.ir/">
+              <img
+                src="./assets/image/129-costco-site-size-2 1 (1).png"
+                class="img"
+              />
+            </a>
+          </div>
         </div>
-        <div class="thirdnews-container">
-          <div class="firstnews-text">
-            <img src="./assets/image/4 (1).png" />
-            <h3 class="text1">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
+        <div class="third-container">
+          <div class="third-text">
+            <p class="text">3.</p>
+            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
             <p class="text2">12 بهمن ماه 1402</p>
             <p class="text2">
               مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
@@ -123,23 +152,27 @@
               رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
             </p>
             <div class="news-link">
-              <img src="./assets/image/Screenshot 2024-05-22 062543.png" />
+              <div class="gray-logo">
+                <img src="./assets/svg/brand-logo-gray.svg" />
+              </div>
               <a href="https://www.news.ir/">
                 <p>www.news.ir</p>
               </a>
             </div>
           </div>
-          <a href="https://www.news.ir/">
-            <img
-              src="./assets/image/129-costco-site-size-2 1.png"
-              class="news-img"
-            />
-          </a>
+          <div class="news-img">
+            <a href="https://www.news.ir/">
+              <img
+                src="./assets/image/129-costco-site-size-2 1 (1).png"
+                class="img"
+              />
+            </a>
+          </div>
         </div>
-        <div class="fourthnews-container">
-          <div class="firstnews-text">
-            <img src="./assets/image/4 (1).png" />
-            <h3 class="text1">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
+        <div class="fourth-container">
+          <div class="fourth-text">
+            <p class="text">4.</p>
+            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
             <p class="text2">12 بهمن ماه 1402</p>
             <p class="text2">
               مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
@@ -149,18 +182,22 @@
               رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
             </p>
             <div class="news-link">
-              <img src="./assets/image/Screenshot 2024-05-22 062543.png" />
+              <div class="gray-logo">
+                <img src="./assets/svg/brand-logo-gray.svg" />
+              </div>
               <a href="https://www.news.ir/">
                 <p>www.news.ir</p>
               </a>
             </div>
           </div>
-          <a href="https://www.news.ir/">
-            <img
-              src="./assets/image/129-costco-site-size-2 1 (4).png"
-              class="news-img"
-            />
-          </a>
+          <div class="news-img">
+            <a href="https://www.news.ir/">
+              <img
+                src="./assets/image/129-costco-site-size-2 1 (1).png"
+                class="img"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -171,11 +208,13 @@
           <h1>درباره ما</h1>
           <div class="more">
             <p>بیشتر بدانید</p>
-            <img src="/assets/image/Group 143726103.png" />
+            <div class="circle">
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
         <div class="aboutus-text">
-          <p class="text-cont">
+          <p class="text-cont text-cont-mobile2">
             مجموعه«تجارت طلایی» به پشتوانه تجربه فعالیت تخصصی در صنعت خرده‌فروشی
             و ارتباط گستردهبا مراکز‌خرید ایران در حال حاضر علاوه‌بر انتشار
             ماهنامه تخصصی تجارت طلایی، به‌صورتسالانه همایش تقدیر از برندهای برتر
@@ -188,7 +227,7 @@
             تبلیغات‌شاناستفاده می‌کنند. لازم به ذکر است که امروز تجارت طلایی
             دارای بزرگ‌ترین وموثرترین شبکه B2B ایران است.
           </p>
-          <div class="text-cont">
+          <div class="text-cont text-cont-mobile">
             <p>مخاطبان تجارت طلایی</p>
             <ul>
               <li>
@@ -207,17 +246,28 @@
             </ul>
           </div>
         </div>
-        <img
-          src="assets/image/Screenshot 2024-05-23 115559.png"
-          class="logo-img"
-        />
       </div>
-      <div class="aboutus-img">
-        <img src="/assets/image/Frame 15863.png" />
-        <div class="arrrow-btn">
-          <img src="/assets/image/Right Button (1).png" />
-          <img src="/assets/image/Left Button.png" />
+      <div class="img-cont">
+        <img src="assets/svg/brand-logo-gray.svg" class="logo-img" />
+      </div>
+
+      <div class="swiper mySwiper swiper-mobile">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/image/سکشن دوم صفحه نخست-1.jpg" alt="Slide 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/image/سکشن دوم صفحه نخست-2.jpg" alt="Slide 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/image/سکشن دوم صفحه نخست-3.jpg" alt="Slide 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/image/سکشن دوم صفحه نخست-4.jpg" alt="Slide 4" />
+          </div>
         </div>
+        <div class="swiper-button-next about-next"></div>
+        <div class="swiper-button-prev about-prev"></div>
       </div>
     </section>
 
@@ -229,7 +279,9 @@
             <a href="https://www.tejaratetalaeenews.ir/IRAN-RETAIL-SHOW">
               <p>www.iranretail.ir</p>
             </a>
-            <img src="/assets/image/Group 143726103.png" />
+            <div class="circle">
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
         <p class="retail-p">
@@ -243,24 +295,41 @@
         </p>
       </div>
       <div class="retail-cont">
-        <div>
-          <img src="/assets/image/Vector 12.png" />
-          <div>
-            <img src="./assets/image/Vector.png" />
-            <p onclick="togglePoster()" class="detail">IRAN RETAIL SHOW 2021</p>
+        <div class="swiper myswiper mySwiper5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p onclick="togglePoster1()" class="detail">
+                IRAN RETAIL SHOW 2021
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p onclick="togglePoster2()" class="detail">
+                IRAN RETAIL SHOW 2021
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p onclick="togglePoster3()" class="detail">
+                IRAN RETAIL SHOW 2021
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p onclick="togglePoster4()" class="detail">
+                IRAN RETAIL SHOW 2021
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p onclick="togglePoster5()" class="detail">
+                IRAN RETAIL SHOW 2021
+              </p>
+            </div>
           </div>
-          <div>
-            <img src="./assets/image/Vector.png" />
-            <p onclick="togglePoster()" class="detail">IRAN RETAIL SHOW 2021</p>
-          </div>
-          <div>
-            <img src="./assets/image/Vector.png" />
-            <p onclick="togglePoster()" class="detail">IRAN RETAIL SHOW 2021</p>
-          </div>
-          <img src="/assets/image/Vector 11.png" />
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
       <div class="poster-modal" id="poster"></div>
+      <div class="poster-modal2" id="poster2"></div>
+      <div class="poster-modal3" id="poster3"></div>
     </section>
 
     <section class="retail-awards">
@@ -271,7 +340,9 @@
             <a href="https://www.tejaratetalaeenews.ir/IRAN-RETAIL-SHOW">
               <p>www.iranretail.ir</p>
             </a>
-            <img src="/assets/image/Group 143726103.png" />
+            <div class="circle">
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
         <p>
@@ -287,29 +358,87 @@
           مدیریت و... تقدیر به عمل می‌آید.
         </p>
       </div>
-      <div class="retail-awards-cont">
-        <div class="awards-description">
-          <h1>ایران ریتیل اواردز دوره ی هشتم</h1>
-          <p>
-            هشتمین مراسم سالانه اهدای جوایز برترین‌های صنعت مراکز خرید، فروشگاه
-            های زنجیره ای و برندهای برتر کشور ایران IranRetailAwards2022 در
-            تاریخ ۳۰ اردیبهشت برگزار خواهد شد.<br />
-            در این رویداد همچون سال‌های گذشته برترین مراکز خرید، هایپرمارکت‌ها و
-            برندها بر اساس معیارهایی که برای این گزینش مدنظر قرار می گیرد و
-            همچنین غرفه های برتر نمایشگاه ایران ریتیل شو سال گذشته و بانوان ارزش
-            آفرین صنعت خرده فروشی در سال ۱۴۰۰ مورد تقدیر قرار خواهند گرفت.
-          </p>
-          <div class="arrrow-btn2">
-            <img src="/assets/image/Right Button (1).png" />
-            <img src="/assets/image/Left Button.png" />
+
+      <div class="awards-description">
+        <div class="awards-description-mobile">
+          <div class="swiper mySwiper2 swiper2" style="margin: 0">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide" style="display: flex">
+                <div class="description-text">
+                  <h1>ایران ریتیل اواردز دوره ی هشتم</h1>
+                  <p>
+                    هشتمین مراسم سالانه اهدای جوایز برترین‌های صنعت مراکز خرید،
+                    فروشگاه های زنجیره ای و برندهای برتر کشور
+                    ایران IranRetailAwards2022 در تاریخ ۳۰ اردیبهشت برگزار خواهد
+                    شد. در این رویداد همچون سال‌های گذشته برترین مراکز خرید،
+                    هایپرمارکت‌ها و برندها بر اساس معیارهایی که برای این گزینش
+                    مدنظر قرار می گیرد و همچنین غرفه های برتر نمایشگاه ایران
+                    ریتیل شو سال گذشته و بانوان ارزش آفرین صنعت خرده فروشی در
+                    سال ۱۴۰۰ مورد تقدیر قرار خواهند گرفت.
+                  </p>
+                </div>
+                <img src="./assets/image/2022.jpg" class="award-img" />
+              </div>
+              <div class="swiper-slide slide" style="display: flex">
+                <div class="description-text">
+                  <h1>ایران ریتیل اواردز دوره ی نهم</h1>
+                  <p>
+                    جمعه 5 خردادماه نهمین همایش تقدیر و تجلیل از مراکزخرید،
+                    فروشگاههای زنجیرهای و برندهای برتر کشور (iran retail awards
+                    2023) با حضور بیش از 1000 نفر از صاحبان مراکزخرید، مدیران و
+                    موسسان فروشگاههای زنجیرهای و برندهای صنوف مختلف به میزبانی
+                    ماهنامه تجارت طالیی برگزار شد.
+                  </p>
+                </div>
+                <img src="./assets/image/2023.jpg" class="award-img" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+          <div class="awards-header">
+            <div>
+              <img src="./assets/image/Rectangle 19.png" />
+            </div>
+            <p>IRAN <br />RETAIL <br />AWARDS</p>
           </div>
         </div>
-        <div class="awards-poster">
-          <img src="./assets/image/img.png" />
-        </div>
-        <div class="awards-header">
-          <img src="./assets/image/Rectangle 19.png" />
-          <p>IRAN <br />RETAIL <br />AWARDS</p>
+
+        <div class="swiper-mobile">
+          <div class="swiper mySwiper2 swiper3" style="margin: 0">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide" style="display: flex">
+                <div class="description-text-mobile">
+                  <h1>ایران ریتیل اواردز دوره ی هشتم</h1>
+                  <p>
+                    هشتمین مراسم سالانه اهدای جوایز برترین‌های صنعت مراکز خرید،
+                    فروشگاه های زنجیره ای و برندهای برتر کشور
+                    ایران IranRetailAwards2022 در تاریخ ۳۰ اردیبهشت برگزار خواهد
+                    شد. در این رویداد همچون سال‌های گذشته برترین مراکز خرید،
+                    هایپرمارکت‌ها و برندها بر اساس معیارهایی که برای این گزینش
+                    مدنظر قرار می گیرد و همچنین غرفه های برتر نمایشگاه ایران
+                    ریتیل شو سال گذشته و بانوان ارزش آفرین صنعت خرده فروشی در
+                    سال ۱۴۰۰ مورد تقدیر قرار خواهند گرفت.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide slide" style="display: flex">
+                <div class="description-text-mobile">
+                  <h1>ایران ریتیل اواردز دوره ی نهم</h1>
+                  <p>
+                    جمعه 5 خردادماه نهمین همایش تقدیر و تجلیل از مراکزخرید،
+                    فروشگاههای زنجیرهای و برندهای برتر کشور (iran retail awards
+                    2023) با حضور بیش از 1000 نفر از صاحبان مراکزخرید، مدیران و
+                    موسسان فروشگاههای زنجیرهای و برندهای صنوف مختلف به میزبانی
+                    ماهنامه تجارت طالیی برگزار شد.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -321,28 +450,69 @@
           <a href="https://www.tejaratetalaeenews.ir/IRAN-RETAIL-SHOW">
             <p class="mah">www.iranretail.ir</p>
           </a>
-          <img src="/assets/image/Group 143726103 (1).png" />
-        </div>
-      </div>
-      <div class="slider">
-        <div class="slides" id="slides">
-          <div class="slide">
-            <img src="./assets/image/Rectangle 10 (1).png" alt="Image 1" />
-          </div>
-          <div class="slide">
-            <img src="./assets/image/Rectangle 10 (2).png" alt="Image 2" />
-          </div>
-          <div class="slide">
-            <img src="./assets/image/Rectangle 10.png" alt="Image 3" />
-          </div>
-          <div class="slide">
-            <img src="./assets/image/Rectangle 15.png" alt="Image 4" />
-          </div>
-          <div class="slide">
-            <img src="./assets/image/Group 479 (1).png" alt="Image 5" />
+          <div class="circle2">
+            <div class="dot2"></div>
           </div>
         </div>
       </div>
+
+      <div class="mahnameh-slider">
+        <div class="swiper-container" style="width: 100%">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="width: 400px">
+              <img src="./assets/image/Rectangle 10 (1).png" alt="Image 1" />
+            </div>
+            <div class="swiper-slide" style="width: 400px">
+              <img src="./assets/image/Rectangle 10 (2).png" alt="Image 2" />
+            </div>
+            <div class="swiper-slide" style="width: 400px">
+              <img src="./assets/image/Rectangle 10.png" alt="Image 3" />
+            </div>
+            <div class="swiper-slide" style="width: 400px">
+              <img src="./assets/image/Rectangle 15.png" alt="Image 4" />
+            </div>
+            <div class="swiper-slide" style="width: 400px">
+              <img src="./assets/image/Group 479 (1).png" alt="Image 5" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="mahnameh-mobile-cont">
+        <div
+          class="swiper mySwiper swiper-mobile"
+          style="
+            width: 264px;
+            height: 360px;
+            margin-top: 40px;
+            margin-bottom: 70px;
+          "
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/Rectangle 10 (1).png" alt="Image 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Rectangle 10 (2).png" alt="Image 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Rectangle 10.png" alt="Image 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Rectangle 15.png" alt="Image 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Group 479 (1).png" alt="Image 5" />
+            </div>
+          </div>
+          <div class="swiper-button-next about-next"></div>
+          <div class="swiper-button-prev about-prev"></div>
+        </div>
+      </div>
+
       <div class="logo">
         <img src="./assets/image/image.png" class="brand" />
       </div>
@@ -368,6 +538,7 @@
       </div>
     </section>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

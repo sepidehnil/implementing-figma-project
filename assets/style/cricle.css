@@ -1,0 +1,49 @@
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+  transition: all 1s ease;
+}
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+.circle:hover {
+  animation: rotateAndFade 1s forwards;
+}
+.circle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  transition: all 1s ease;
+}
+.dot2 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+.circle2:hover {
+  animation: rotateAndFade 1s forwards;
+}
+
+@keyframes rotateAndFade {
+  0% {
+    transform: rotate(360deg);
+    border-color: rgb(0, 0, 0); /* Final border color */
+  }
+  100% {
+    transform: rotate(0deg);
+    border-color: white; /* Final border color */
+  }
+}
