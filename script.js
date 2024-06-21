@@ -3,19 +3,19 @@ const sidebarMenu = document.getElementById("sidebar-container");
 function togglemenu() {
   sidebarMenu.innerHTML = `<div class="sidebar">
   <div class="sidebar-wrapper">
-      <img src="./assets/svg/close.svg" onclick="closebtn()" class="closebtn" id="close"/>
+      <img src="../assets/svg/close.svg" onclick="closebtn()" class="closebtn" id="close"/>
 
   <div class="mobile-size-cont">
   <div>
-      <img src="./assets/svg/close.svg" onclick="closebtn()" class="closebtn" />
+      <img src="../assets/svg/close.svg" onclick="closebtn()" class="closebtn" />
                 <img
-              src="./assets/svg/search2.svg"
+              src="../assets/svg/search2.svg"
               onclick="toggleSearch()"
               id="toggleSearch"
             /></div>
         <a href="http://127.0.0.1:5500/index.html">
 
-  <img src="./assets/image/GodenBusinessMagazine_LOGOOK (1) 1 (1).png" class="mobile-size-logo"/></a>
+  <img src="../assets/image/GodenBusinessMagazine_LOGOOK (1) 1 (1).png" class="mobile-size-logo"/></a>
     </div>
 
     <div class="sidebar-items">
@@ -35,13 +35,13 @@ function togglemenu() {
     <div class="sidebar-links">
       <div class="sidebar-socialmedia">
         <a href="tel:+982166399241">
-          <img src="./assets/svg/telephone.svg" class="social" />
+          <img src="../assets/svg/telephone.svg" class="social" />
         <a href="https://www.instagram.com/goldenbusinessmagazine/">
-          <img src="./assets/svg/instagram.svg" class="social" />
+          <img src="../assets/svg/instagram.svg" class="social" />
         </a>
         <a
           href="https://www.linkedin.com/company/goldenbusinessmagazine/?originalSubdomain=ir"
-          ><img src="./assets/svg/linkedin.svg" class="social" />
+          ><img src="../assets/svg/linkedin.svg" class="social" />
         </a>
       </div>
       <a href="http://www.gbmnews.ir"> <p>www.gbmnews.ir</p></a>
@@ -88,73 +88,6 @@ function posterclick3() {
   poster3.innerHTML = "";
 }
 
-//////////////////////(/////////modal
-const modal = document.getElementById("modal-wrapper");
-function profiletoggle() {
-  modal.innerHTML = `
-  <div class="modal">     
-  <i class="bi bi-x-lg" onclick="closebtn2()"></i>
-  <div class="modal-container">
-          <div>
-            <img src="../assets/image/Frame 15884.png" />
-          </div>
-          <div class="name">
-            <div class="name-cont">
-              <p>مدیرعامل و سردبیر</p>
-              <h4>مهندس شاهرخ کشاورز</h4>
-            </div>
-            <p>Engineer Shahrukh Keshavarz</p>
-          </div>
-        </div>
-        <p class="description">
-          ۱۶ آذر ۱۴۰۰ برابر با ۷ دسامبر ۲۰۲۱ مهندس شاهرخ کشاورز نماینده انجمن
-          مراکز خرید خاورمیانه و شمال افریقا، جایزه نفر دوم، بیست‌وهفتمین کنگره
-          سالانه مراکز خرید خاورمیانه (Retail Congress MENA) را کسب کرد. به
-          گزارش ایسنا بنابر اعلام بیمه تایم، در این مراسم که توسط انجمن مراکز
-          خرید و خرده‌فروشی خاورمیانه و با مشارکت اتاق بازرگانی دبی سازماندهی
-          شد، متخصصان خرده فروشی در سراسر جهان در واقع در یک کنفرانس، نمایشگاه و
-          معامله حضور یافتند. ‎این کنگره سالانه مراکز خرید و خرده فروشی و مراسم
-          اهدای جوایز ۶ و 7 دسامبر امسال مصادف با 15 و 16 آذرماه سال جاری در هتل
-          «ریتز کارلتون» دوبی و در دل «اکسپوی دوبی» برگزار شد. رویکردها ‎در بیست
-          وهفتمین سال برگزاری مراسم مورد اشاره، رویکردهای جدید صنعت خرده‌فروشی
-          هم مورد بررسی قرار گرفت. در این مراسم روند خرده‌فروشی دنیا پس از شیوع
-          کرونا به بحث و گفت وگو گذاشته شد و ضمن بررسی رویکرد آنلاین، خرده‌فروشی
-          آفلاین هم به شکل ویژه‌ای مورد توجه قرار گرفت؛ ضمن اینکه تکنولوژی‌های
-          جدید در زمینه خرده‌فروشی و همچنین تحولات اخیرهم از دیگر مباحث این
-          مراسم 2 روزه بود. ‎افتخاری برای خرده‌فروشی ایران ‎اما نکته حائز اهمیت
-          در این دوره از مراسم، کاندیدا شدن مهندس شاهرخ کشاورز، صاحب امتیاز و
-          مدیرمسئول ماهنامه «تجارت طلایی» و نماینده رسمی انجمن مراکز خرید
-          خاورمیانه و شمال آفریقا در ایران و رقابتش با 2 کاندیدای دیگر از
-          کشورهای حوزه خلیج فارس (عربستان سعودی و امارات متحده عربی) بود.
-          تلاش‌ها و نقش موثر او در صنعت خرده‌فروشی منجر به کاندیدا شدنش در مورد
-          جایزه مرد سال خرده‌فروشی خاورمیانه (جایزه سال خرده‌فروشی) شد. رقبای
-          مهندس کشاورز، محمد المزروئی، مدیر اماراتی مجموعه «دلما مال» و ماجد
-          القطمی، مدیر مجموعه «آزاد» از کشور عربستان سعودی نام داشتند.
-          فعالیت‌های موثر مهندس کشاورز علاوه بر فعالیت گسترده در صنعت خرده‌فروشی
-          و مراکز خرید کشور، عمل به مسئولیت‌های اجتماعی در قالب رسانه‌ای که
-          مسئولیت آن را برعهده دارد را در مرکز توجهش قرار داده و بر همین اساس
-          حامی و برگزارکننده رویدادهای گوناگونی در مسیر کمک به تاب‌آوری سازمانی
-          و البته هموارسازی چالش‌های پیش روی فعالان این صنعت نام دارد.  از جمله
-          مهم‌ترین اقدامات صورت گرفته از سوی مهندس کشاورز، برپایی پویش ملی حمایت
-          مراکزخرید از کسبه و فعالان اقتصادی، همزمان با ورود ویروس کرونا به کشور
-          و تحت تاثیر قرار گرفتن صنایع و کسب و کارهای گوناگون بود. این موضوع با
-          استقبال گسترده صاحبان بسیاری از مراکز خرید کشور همراه شد و علاوه بر
-          رسانه‌های داخلی، بازتاب گسترده‌ای در رسانه‌های خارجی و بین‌المللی هم
-          داشت. ‎از دیگر اقدامات مهم مهندس کشاورز، برگزاری نمایشگاه مراکز خرید،
-          مجتمع‌های تجاری، رویکردهای نوین صنعت خرده فروشی و صنایع وابسته تحت
-          عنوان «نمایشگاه ایران ریتیل شو» بود که طی 3 سال متوالی با حضور بسیاری
-          از فعالان صنعت خرده‌فروشی در محل نمایشگاه‌های بین‌المللی تهران برگزار
-          شد و به نوعی به رسمیت شناخته شدن صنعت خرده‌فروشی همچون دیگر صنایع فعال
-          در کشور و توجه بیش‌تر مسئولان عالی رتبه کشوری را در پی داشت
-        </p>
-        </div> `;
-  document.body.classList.add("modal-open");
-}
-function closebtn2() {
-  modal.innerHTML = "";
-  document.body.classList.remove("modal-open");
-}
-
 ////////////////////////////////////searchbtn
 const searchWrapper = document.querySelector(".search");
 function closebtn3() {
@@ -165,13 +98,13 @@ function toggleSearch() {
     <div class="search-wrapper">
       <div class="search-container">
           <img
-            src="./assets/svg/close.svg"
+            src="../assets/svg/close.svg"
             onclick="closebtn3()"
             class="closeBtn"
           />
           <div class="search-input">
             <input type="text" id="searchInput" placeholder="جستجو کنید" />
-            <img src="./assets/svg/search.svg" onclick="performSearch()" />
+            <img src="../assets/svg/search.svg" onclick="performSearch()" />
           </div>
 
         <div id="searchResults"></div>
@@ -356,14 +289,7 @@ const swiper5 = new Swiper(".mySwiper5", {
     },
   },
 });
-//////////////////////////////////
-const swiper2 = new Swiper(".mySwiper2", {
-  rewind: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+
 /////////////////////////////////
 const mySwiper = new Swiper(".swiper-container", {
   loop: true,
@@ -392,29 +318,3 @@ const mySwiper = new Swiper(".swiper-container", {
 });
 
 /////////////////////
-const progressRect = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var mySwiper2 = new Swiper(".mySwiper2", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressRect.style.setProperty("--progress", progress);
-      progressContent.textContent = "";
-    },
-  },
-});
-
-//////////////////

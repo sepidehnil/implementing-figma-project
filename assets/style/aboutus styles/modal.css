@@ -48,3 +48,9 @@
   font-size: 0.7rem;
   line-height: 25px;
 }
+@media only screen and (max-width: 680px) {
+  .modal {
+    width: 400px;
+    overflow-y: scroll;
+  }
+}

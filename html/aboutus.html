@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/style/sidebar.css" />
     <link rel="stylesheet" href="/assets/style/index.css" />
     <link rel="stylesheet" href="/assets/style/aboutus styles/modal.css" />
+    <link rel="stylesheet" href="/assets/style/cricle.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -20,32 +21,40 @@
   <body>
     <div class="aboutus-mainpage">
       <header>
-        <div class="header-wrapper">
+        <div class="description-wrapper">
           <div class="header-description">
-            <i class="bi bi-list" onclick="togglemenu()"></i>
-            <a href="../html/aboutus.html">
+            <img
+              src="../assets/svg/menu-list.svg"
+              onclick="togglemenu()"
+              class="menu-list"
+            />
+            <a href="./html/aboutus.html">
               <p>درباره ما</p>
             </a>
             <p>ایران ریتیل شو</p>
             <p>ایران ریتیل اواردز</p>
             <p>پایگاه خبری</p>
-            <a href="../html/contactus.html">
+            <p>ماهنامه تجارت طلایی</p>
+            <a href="./html/contactus.html">
               <p>تماس با ما</p>
             </a>
-            <p>ماهنامه تجارت طلایی</p>
-            <i class="bi bi-search"></i>
-          </div>
-          <a href="http://127.0.0.1:5500/index.html">
             <img
-              src="../assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
-              alt="brand-logo"
-              class="brand-logo"
+              src="../assets/svg/search2.svg"
+              onclick="toggleSearch()"
+              id="toggleSearch"
             />
-          </a>
+          </div>
         </div>
+        <a href="http://127.0.0.1:5500/index.html">
+          <img
+            src="../assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
+            alt="brand-logo"
+            class="brand-logo"
+          />
+        </a>
       </header>
 
-      <div class="header-border"></div>
+      <div class="search"></div>
       <div id="sidebar-container"></div>
 
       <section class="aboutus-main">
@@ -74,7 +83,7 @@
               --swiper-navigation-color: #fff;
               --swiper-pagination-color: #fff;
               width: 100%;
-              height: 550px;
+              height: auto;
               border-radius: 35px;
             "
             class="swiper mySwiper2"
@@ -104,7 +113,9 @@
         <div class="about-us2">
           <div class="container1">
             <div class="cont1">
-              <img src="../assets/image/Rectangle 22057.png" />
+              <div>
+                <img src="../assets/image/Rectangle 22057.png" />
+              </div>
               <h2>About the holding</h2>
               <p>درباره هلدینگ</p>
             </div>
@@ -131,7 +142,9 @@
 
           <div class="container1">
             <div class="cont1">
-              <img src="../assets/image/Rectangle 22057.png" />
+              <div>
+                <img src="../assets/image/Rectangle 22057.png" />
+              </div>
               <h2>Golden business audience</h2>
               <p>مخاطبان تجارت طلایی</p>
             </div>
@@ -158,11 +171,7 @@
 
         <div class="video-wrapper">
           <div class="video-container">
-            <video
-              id="myVideo"
-              poster="../assets/image/کاور-ویدئو.jpg"
-              style="width: 1050px; height: 500px"
-            >
+            <video id="myVideo" poster="../assets/image/کاور-ویدئو.jpg">
               <source
                 src="../assets/image/ویدئو برای صفحه درباره ما.mp4"
                 type="video/mp4"
@@ -198,35 +207,40 @@
           </div>
         </div>
 
-        <div class="profiles">
-          <div class="profile-img">
-            <img src="../assets/image/Frame 15884 (1).png" alt="Image 1" />
-            <div class="profile-details">
-              <div class="profile-names">
-                <p>مدیرعامل و سردبیر</p>
-                <h4>مهندس شاهرخ کشاورز</h4>
-              </div>
-              <i class="bi bi-plus" onclick="profiletoggle()"></i>
-            </div>
+        <div class="profiles-cont">
+          <div class="awards-title">
+            <h2>معرفی مدیرها</h2>
           </div>
-          <div class="profile-img">
-            <img src="../assets/image/Frame 15884 (2).png" alt="Image 2" />
-            <div class="profile-details">
-              <div class="profile-names">
-                <p>مدیرعامل و سردبیر</p>
-                <h4>مهندس شاهرخ کشاورز</h4>
+          <div class="profiles">
+            <div class="profile-img">
+              <img src="../assets/image/Frame 15884 (1).png" alt="Image 1" />
+              <div class="profile-details">
+                <div class="profile-names">
+                  <p>مدیرعامل و سردبیر</p>
+                  <h4>مهندس شاهرخ کشاورز</h4>
+                </div>
+                <i class="bi bi-plus" onclick="profiletoggle()"></i>
               </div>
-              <i class="bi bi-plus" onclick="profiletoggle()"></i>
             </div>
-          </div>
-          <div class="profile-img">
-            <img src="../assets/image/Frame 15884.png" alt="Image 3" />
-            <div class="profile-details">
-              <div class="profile-names">
-                <p>مدیرعامل و سردبیر</p>
-                <h4>مهندس شاهرخ کشاورز</h4>
+            <div class="profile-img">
+              <img src="../assets/image/Frame 15884 (2).png" alt="Image 2" />
+              <div class="profile-details">
+                <div class="profile-names">
+                  <p>مدیرعامل و سردبیر</p>
+                  <h4>مهندس شاهرخ کشاورز</h4>
+                </div>
+                <i class="bi bi-plus" onclick="profiletoggle()"></i>
               </div>
-              <i class="bi bi-plus" onclick="profiletoggle()"></i>
+            </div>
+            <div class="profile-img">
+              <img src="../assets/image/Frame 15884.png" alt="Image 3" />
+              <div class="profile-details">
+                <div class="profile-names">
+                  <p>مدیرعامل و سردبیر</p>
+                  <h4>مهندس شاهرخ کشاورز</h4>
+                </div>
+                <i class="bi bi-plus" onclick="profiletoggle()"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -285,6 +299,40 @@
           </div>
           <div class="certificate-container">
             <div class="certificate-img"></div>
+          </div>
+        </div>
+
+        <div class="certificate-slider-mobile">
+          <div class="awards-title">
+            <h2>گواهینامه ها</h2>
+          </div>
+          <div class="certificate-cont-slider">
+            <div class="swiper-container" style="width: 100%">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 400px">
+                  <img src="../assets/image/cer1.png" alt="Image 1" />
+                  <p>گواهینامه ۱</p>
+                </div>
+                <div class="swiper-slide" style="width: 400px">
+                  <img src="../assets/image/cer2.png" alt="Image 2" />
+                  <p>گواهینامه ۲</p>
+                </div>
+                <div class="swiper-slide" style="width: 400px">
+                  <img src="../assets/image/cer3.png" alt="Image 3" />
+                  <p>گواهینامه ۳</p>
+                </div>
+                <div class="swiper-slide" style="width: 400px">
+                  <img src="../assets/image/cer4.png" alt="Image 4" />
+                  <p>گواهینامه ۴</p>
+                </div>
+              </div>
+              <div
+                class="swiper-pagination"
+                style="bottom: var(--swiper-pagination-bottom)"
+              ></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
         </div>
 

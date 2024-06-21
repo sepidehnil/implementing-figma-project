@@ -14,30 +14,41 @@
   </head>
   <body>
     <header>
-      <div class="header-wrapper">
+      <div class="description-wrapper">
         <div class="header-description">
-          <i class="bi bi-list" onclick="togglemenu()"></i>
-          <a href="../html/aboutus.html">
+          <img
+            src="../assets/svg/menu-list.svg"
+            onclick="togglemenu()"
+            class="menu-list"
+          />
+          <a href="./html/aboutus.html">
             <p>درباره ما</p>
           </a>
           <p>ایران ریتیل شو</p>
           <p>ایران ریتیل اواردز</p>
           <p>پایگاه خبری</p>
-          <a href="../html/contactus.html">
+          <p>ماهنامه تجارت طلایی</p>
+          <a href="./html/contactus.html">
             <p>تماس با ما</p>
           </a>
-          <p>ماهنامه تجارت طلایی</p>
-          <i class="bi bi-search"></i>
-        </div>
-        <a href="http://127.0.0.1:5500/index.html">
           <img
-            src="../assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
-            alt="brand-logo"
-            class="brand-logo"
+            src="../assets/svg/search2.svg"
+            onclick="toggleSearch()"
+            id="toggleSearch"
           />
-        </a>
+        </div>
       </div>
+      <a href="http://127.0.0.1:5500/index.html">
+        <img
+          src="../assets/image/GodenBusinessMagazine_LOGOOK (1) 1.png"
+          alt="brand-logo"
+          class="brand-logo"
+        />
+      </a>
     </header>
+
+    <div class="search"></div>
+    <div id="sidebar-container"></div>
 
     <div class="header-border"></div>
     <div id="sidebar-container"></div>
@@ -45,30 +56,41 @@
     <div class="frame"><img src="../assets/image/Frame 143726229.png" /></div>
 
     <h2 class="h">تماس با ما</h2>
+
     <div class="contact-us">
       <div class="header-contact">
         <h2>دسترسی</h2>
         <div>
-          <p class="h2">ادرس</p>
-          <p>
-            تهران، مهرآباد جنوبی، خیابان دانشگاه هوایی جنوبی، ابتدای تفرش شرقی
-            پلاک 170، ساختمان تجارت طلایی
-          </p>
-          <p class="h2">فکس</p>
-          <p>02165830921</p>
-          <p class="h2">تلفن</p>
-          <p>02166399241</p>
+          <div class="sub-header">
+            <p class="h2">ادرس</p>
+            <p>
+              تهران، مهرآباد جنوبی، خیابان دانشگاه هوایی جنوبی، ابتدای تفرش شرقی
+              پلاک 170، ساختمان تجارت طلایی
+            </p>
+          </div>
+          <div class="sub-header">
+            <p class="h2">فکس</p>
+            <p>02165830921</p>
+          </div>
+          <div class="sub-header">
+            <p class="h2">تلفن</p>
+            <p>02166399241</p>
+          </div>
         </div>
       </div>
 
-      <div class="header-contact">
-        <div class="border">
-          <h2>شبکه اجتماعی</h2>
-          <div>
+      <div class="header-contact header-border">
+        <h2>شبکه اجتماعی</h2>
+        <div>
+          <div class="sub-header">
             <p class="h2">اینستاگرام</p>
-            <p>Goldenbusinessmagazine Iranretailshow</p>
+            <p>Goldenbusinessmagazine</p>
+            <p>Iranretailshow</p>
+          </div>
+          <div class="sub-header">
             <p class="h2">لینکدین</p>
-            <p>Iran Retail Show Golden Business Magazine</p>
+            <p>Iran Retail Show</p>
+            <p>Golden Business Magazine</p>
           </div>
         </div>
       </div>
@@ -119,19 +141,25 @@
       </form>
     </div>
 
-    <img src="../assets/image/Rectangle 39.png" class="map" />
+    <a href="https://maps.app.goo.gl/yjenrFWbPUfoXEtd8" target="_blank">
+      <div class="map-cont">
+        <img src="../assets/image/Rectangle 39.png" class="map" />
+        <img src="../assets/svg/map.svg" class="google-map" />
+      </div>
+    </a>
 
     <div class="logo">
       <img src="../assets/image/image.png" class="brand" />
     </div>
+
     <div class="footer-deatail">
       <p class="footer-text">
         <i class="bi bi-instagram media-border"></i>
         Goldenbusinessmagazine <br />Iranretailshow
       </p>
       <p class="footer-text">
-        <i class="bi bi-instagram media-border"></i>
-        Goldenbusinessmagazine <br />Iranretailshow
+        <i class="bi bi-linkedin media-border"></i>
+        <span>Iran Retail Show <br />Golden Business Magazine</span>
       </p>
       <p class="footer-text">
         <i class="bi bi-telephone-fill media-border"></i>02166399241
