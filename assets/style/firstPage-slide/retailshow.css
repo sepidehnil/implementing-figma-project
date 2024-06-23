@@ -1,10 +1,11 @@
 .retail-show {
   height: 100vh;
-  background-image: url("./../image/Mask group (2).png");
+  background-image: url("../../image/Mask group (2).png");
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative;
   overflow-x: hidden;
+  margin: 50px 0;
 }
 .retail-show-text {
   width: 600px;
@@ -90,6 +91,7 @@
 }
 .swiper-slide {
   text-align: center;
+  width: 100%;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -108,6 +110,9 @@
 .swiper-mobile-cont {
   display: none;
 }
+/* .swiper-wrapper {
+  transform: none !important;
+} */
 @media only screen and (max-width: 680px) {
   .swiper-slide p {
     font-size: 15px;

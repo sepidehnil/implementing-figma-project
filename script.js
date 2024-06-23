@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 0) {
+    header.classList.add("header-scrolled");
+  } else {
+    header.classList.remove("header-scrolled");
+  }
+});
+
 /////////////////////////////sidebar
 const sidebarMenu = document.getElementById("sidebar-container");
 function togglemenu() {
@@ -63,7 +73,8 @@ const poster = document.getElementById("poster");
 const poster2 = document.getElementById("poster2");
 const poster3 = document.getElementById("poster3");
 
-function togglePoster() {
+function togglePoster1() {
+  console.log("sf");
   poster.innerHTML = `
   <img src="/assets/image/2022 6.png" onclick="posterclick()"/>
 `;
@@ -90,9 +101,11 @@ function posterclick3() {
 
 ////////////////////////////////////searchbtn
 const searchWrapper = document.querySelector(".search");
+
 function closebtn3() {
   searchWrapper.innerHTML = "";
 }
+
 function toggleSearch() {
   searchWrapper.innerHTML = `
     <div class="search-wrapper">
@@ -106,7 +119,6 @@ function toggleSearch() {
             <input type="text" id="searchInput" placeholder="جستجو کنید" />
             <img src="../assets/svg/search.svg" onclick="performSearch()" />
           </div>
-
         <div id="searchResults"></div>
       </div>
     </div>`;
@@ -122,20 +134,20 @@ function performSearch() {
 
     // Search the current page
     resultsFound =
-      searchInDocument(document, query, resultsContainer) || resultsFound; ///if the search result found return true
+      searchInDocument(document, query, resultsContainer) || resultsFound;
 
     // Search linked HTML files
-    const linkedHtmlFiles = ["./html/aboutus.html", "./html/contactus.html"]; // Add your linked HTML files here
+    const linkedHtmlFiles = ["../html/aboutus.html", "../html/contactus.html"]; // Add your linked HTML files here
     linkedHtmlFiles.forEach((file) => {
       fetch(file)
-        .then((response) => response.text()) //This converts the response to text (HTML content).
+        .then((response) => response.text())
         .then((html) => {
           const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html"); //Parses the HTML string into a DOM document, allowing for DOM manipulation and querying.
-          console.log(doc);
+          const doc = parser.parseFromString(html, "text/html");
           resultsFound =
             searchInDocument(doc, query, resultsContainer, file) ||
             resultsFound;
+
           // If no results found after checking all documents, ensure resultsContainer remains empty
           if (!resultsFound && resultsContainer.innerHTML === "") {
             resultsContainer.innerHTML = `<p class="notfound">با عرض پوزش مطلبی پیدا نشد.<br />واژه دیگری را جستجو نمایید.</p>`; // No results to show
@@ -146,21 +158,29 @@ function performSearch() {
 }
 
 function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
-  const paragraphs = doc.querySelectorAll("p"); //as an array
-  console.log(paragraphs);
+  const paragraphs = doc.querySelectorAll("p");
   let resultsFound = false;
+  let count = 0; // To limit the number of results
 
-  paragraphs.forEach((paragraph) => {
+  for (const paragraph of paragraphs) {
+    if (count >= 3) break; // Limit to 3 results
+
     if (paragraph.textContent.toLowerCase().includes(query)) {
+      count++;
       const resultDiv = document.createElement("div");
       resultDiv.classList.add("result");
 
-      const snippet = paragraph.textContent.replace(
+      let snippetText = paragraph.textContent.substring(0, 100);
+      if (paragraph.textContent.length > 100) {
+        snippetText += "...";
+      }
+
+      const snippet = snippetText.replace(
         new RegExp(query, "gi"),
         (match) => `<span class="highlight">${match}</span>`
       );
+
       resultDiv.innerHTML = `<p>${snippet}</p>`;
-      console.log(snippet);
 
       const showMoreLink = document.createElement("a");
       showMoreLink.classList.add("showMoreLink");
@@ -172,7 +192,6 @@ function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
             </div>`;
       showMoreLink.href = "#";
       showMoreLink.addEventListener("click", () => {
-        console.log(fileUrl);
         if (fileUrl) {
           window.location.href = `${fileUrl}#${paragraph.id}`;
         } else {
@@ -184,7 +203,7 @@ function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
       resultsContainer.appendChild(resultDiv);
       resultsFound = true;
     }
-  });
+  }
 
   return resultsFound;
 }
@@ -204,93 +223,75 @@ function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
 
 // slides.innerHTML = imagesHTML;
 
-// let swiper;
-// document.addEventListener("DOMContentLoaded", function () {
-//   swiper = new Swiper(".aboutus-slider", {
-//     // Optional parameters
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     // navigation: {
-//     //   nextEl: ".swiper-button-next",
-//     //   prevEl: ".swiper-button-prev",
-//     // },
-//   });
-// });
-
-// // Function to handle next button click
-// function nextbtn() {
-//   console.log("afd");
-//   swiper.slideNext();
-// }
-
-// // Function to handle previous button
-// function prevbtn() {
-//   console.log("ef");
-//   swiper.slidePrev();
-// }
-
-// ///////////////////////////section6
-// let mySwiper;
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   mySwiper = new Swiper(".swiper-container", {
-//     effect: "coverflow",
-//     grabCursor: true,
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     coverflowEffect: {
-//       rotate: 50,
-//       stretch: 0,
-//       depth: 100,
-//       modifier: 1,
-//       slideShadows: true,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
-// });
-
-// function next() {
-//   mySwiper.slideNext();
-// }
-// function prev() {
-//   mySwiper.slidePrev();
-// }
-
+////////////////////////////////aboutus swiper
 const swiper = new Swiper(".mySwiper", {
   rewind: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".about-next",
+    prevEl: ".about-prev",
   },
 });
+function aboutusenext() {
+  mySwiper.slideNext();
+}
+function aboutuseprev() {
+  mySwiper.slidePrev();
+}
+////////////////////////////////awardsswiper
+const swiper2 = new Swiper(".mySwiper2", {
+  rewind: true,
+  navigation: {
+    nextEl: ".awards-next",
+    prevEl: ".awards-prev",
+  },
+});
+const swiper3 = new Swiper(".swiper3", {
+  rewind: true,
+  navigation: {
+    nextEl: ".awards-next",
+    prevEl: ".awards-prev",
+  },
+});
+function awardsNext() {
+  swiper2.slideNext();
+}
+function prev() {
+  swiper2.slidePrev();
+}
+
 //////////////////////////////////
-const swiper5 = new Swiper(".mySwiper5", {
+// const swiper5 = new Swiper(".mySwiper5", {
+//   slidesPerView: 3,
+//   centeredSlides: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   breakpoints: {
+//     // When the viewport width is >= 0px
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     // When the viewport width is >= 680px
+//     680: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
+
+var swiper5 = new Swiper(".mySwiper5", {
+  cssMode: true,
   slidesPerView: 3,
-  centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  breakpoints: {
-    // When the viewport width is >= 0px
-    0: {
-      slidesPerView: 1,
-    },
-    // When the viewport width is >= 680px
-    680: {
-      slidesPerView: 3,
-    },
+  pagination: {
+    el: ".swiper-pagination",
   },
+  mousewheel: true,
 });
-
-/////////////////////////////////
+/////////////////////////////////mahnameh
 const mySwiper = new Swiper(".swiper-container", {
   loop: true,
   speed: 1000,
@@ -307,14 +308,46 @@ const mySwiper = new Swiper(".swiper-container", {
     slideShadows: false,
   },
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    el: ".mahnameh-pagination",
   },
-
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mahnameh-next",
+    prevEl: ".mahnameh-prev",
   },
 });
 
-/////////////////////
+/////////////////////scroll
+/*------------------------------
+Register plugins
+------------------------------*/
+gsap.registerPlugin(ScrollTrigger);
+
+/*------------------------------
+Init ScrollSmoother
+------------------------------*/
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".accordions",
+    pin: true,
+    start: "top top",
+    end: "bottom top",
+    scrub: 1,
+    ease: "linear",
+  },
+});
+
+tl.to(".accordion .text", {
+  height: 0,
+  paddingBottom: 0,
+  opacity: 0,
+  stagger: 0.5,
+});
+tl.to(
+  ".accordion",
+  {
+    marginBottom: -300,
+    stagger: 0.5,
+  },
+  "<"
+);

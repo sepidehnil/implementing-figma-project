@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/homepage.css" />
+    <link rel="stylesheet" href="assets/style/firstPage-slide/homepage.css" />
     <link rel="stylesheet" href="assets/style/index.css" />
-    <link rel="stylesheet" href="assets/style/sidebar.css" />
-    <link rel="stylesheet" href="assets/style/latestnews.css" />
-    <link rel="stylesheet" href="assets/style/aboutus.css" />
-    <link rel="stylesheet" href="/assets/style/retailshow.css" />
-    <link rel="stylesheet" href="/assets/style/retailawards.css" />
-    <link rel="stylesheet" href="/assets/style/mahnameh.css" />
-    <link rel="stylesheet" href="./assets/style/cricle.css" />
+    <link rel="stylesheet" href="assets/style/firstPage-slide/sidebar.css" />
+    <link rel="stylesheet" href="assets/style/firstPage-slide/latestnews.css" />
+    <link rel="stylesheet" href="assets/style/firstPage-slide/aboutus.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/style/firstPage-slide/retailshow.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/style/firstPage-slide/retailawards.css"
+    />
+    <link rel="stylesheet" href="/assets/style/firstPage-slide/mahnameh.css" />
+    <link rel="stylesheet" href="./assets/style/firstPage-slide/cricle.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -20,8 +26,10 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./assets/style/firstPage-slide/scroll.css" />
     <title>ui design</title>
   </head>
+
   <body>
     <section class="homepage-section">
       <header>
@@ -32,16 +40,16 @@
               onclick="togglemenu()"
               class="menu-list"
             />
-            <a href="./html/aboutus.html">
-              <p>درباره ما</p>
-            </a>
+            <p>
+              <a href="./html/aboutus.html"> درباره ما </a>
+            </p>
             <p>ایران ریتیل شو</p>
             <p>ایران ریتیل اواردز</p>
             <p>پایگاه خبری</p>
             <p>ماهنامه تجارت طلایی</p>
-            <a href="./html/contactus.html">
-              <p>تماس با ما</p>
-            </a>
+            <p>
+              <a href="./html/contactus.html"> تماس با ما </a>
+            </p>
             <img
               src="./assets/svg/search2.svg"
               onclick="toggleSearch()"
@@ -62,8 +70,8 @@
         <p class="homepage-text1">GOLDEN BUSINESS</p>
         <p class="homepage-text2">دروازه ای به بازار جهانی</p>
         <div class="slider">
-          <img src="./assets/svg/slider.svg" />
-          <img src="./assets/svg/slider.svg" />
+          <img src="./assets/svg/slider.svg" class="arrow" />
+          <img src="./assets/svg/slider.svg" class="arrow" />
         </div>
       </div>
 
@@ -71,133 +79,151 @@
 
       <div id="sidebar-container"></div>
 
-      <video class="video-background" autoplay loop muted playsinline>
-        <source src="./assets/image/تیزر صفحه نخست.mp4" type="video/mp4" />
-      </video>
+      <div class="video-wrapper">
+        <video class="video-background" autoplay loop muted playsinline>
+          <source src="./assets/image/تیزر صفحه نخست.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+      </div>
     </section>
 
     <section class="news">
       <div class="title">LASTED NEWS</div>
-      <div class="news-wrapper">
-        <div class="firstnews-container">
-          <div class="firstnews-text">
-            <p class="text">1.</p>
-            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
-            <p class="text2">12 بهمن ماه 1402</p>
-            <p class="text2">
-              مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
-              آمریکایی برای اخراج برخی از کارکنان خود در سال جاری میلادی خبر
-              داد.<br />
-              رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
-              رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
-            </p>
-            <div class="news-link">
-              <div class="gray-logo">
-                <img src="./assets/svg/brand-logo-gray.svg" />
+
+      <div id="wrapper">
+        <div id="content">
+          <div class="spacer"></div>
+          <div class="accordions">
+            <div class="accordion">
+              <div class="firstnews-container">
+                <div class="text">
+                  <p class="number">1.</p>
+                  <h3 class="news-title">
+                    کاستکو و دغدغه‌هایی از جنس کارمندان
+                  </h3>
+                  <p class="text2">12 بهمن ماه 1402</p>
+                  <p class="text2">
+                    مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این
+                    شرکت آمریکایی برای اخراج برخی از کارکنان خود در سال جاری
+                    میلادی خبر داد.<br />
+                    رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
+                    رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
+                  </p>
+                  <div class="news-link">
+                    <div class="gray-logo">
+                      <img src="./assets/svg/brand-logo-gray.svg" />
+                    </div>
+                    <a href="https://www.news.ir/">
+                      <p>www.news.ir</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="firstnews-container-img">
+                  <img
+                    src="./assets/image/129-costco-site-size-2 1 (1).png"
+                    class="img"
+                  />
+                </div>
               </div>
-              <a href="https://www.news.ir/">
-                <p>www.news.ir</p>
-              </a>
+            </div>
+            <div class="accordion">
+              <div class="firstnews-container">
+                <div class="text">
+                  <p class="number">1.</p>
+                  <h3 class="news-title">
+                    کاستکو و دغدغه‌هایی از جنس کارمندان
+                  </h3>
+                  <p class="text2">12 بهمن ماه 1402</p>
+                  <p class="text2">
+                    مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این
+                    شرکت آمریکایی برای اخراج برخی از کارکنان خود در سال جاری
+                    میلادی خبر داد.<br />
+                    رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
+                    رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
+                  </p>
+                  <div class="news-link">
+                    <div class="gray-logo">
+                      <img src="./assets/svg/brand-logo-gray.svg" />
+                    </div>
+                    <a href="https://www.news.ir/">
+                      <p>www.news.ir</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="firstnews-container-img">
+                  <img
+                    src="./assets/image/129-costco-site-size-2 1 (1).png"
+                    class="img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="firstnews-container">
+                <div class="text">
+                  <p class="number">1.</p>
+                  <h3 class="news-title">
+                    کاستکو و دغدغه‌هایی از جنس کارمندان
+                  </h3>
+                  <p class="text2">12 بهمن ماه 1402</p>
+                  <p class="text2">
+                    مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این
+                    شرکت آمریکایی برای اخراج برخی از کارکنان خود در سال جاری
+                    میلادی خبر داد.<br />
+                    رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
+                    رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
+                  </p>
+                  <div class="news-link">
+                    <div class="gray-logo">
+                      <img src="./assets/svg/brand-logo-gray.svg" />
+                    </div>
+                    <a href="https://www.news.ir/">
+                      <p>www.news.ir</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="firstnews-container-img">
+                  <img
+                    src="./assets/image/129-costco-site-size-2 1 (1).png"
+                    class="img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="firstnews-container">
+                <div class="text">
+                  <p class="number">1.</p>
+                  <h3 class="news-title">
+                    کاستکو و دغدغه‌هایی از جنس کارمندان
+                  </h3>
+                  <p class="text2">12 بهمن ماه 1402</p>
+                  <p class="text2">
+                    مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این
+                    شرکت آمریکایی برای اخراج برخی از کارکنان خود در سال جاری
+                    میلادی خبر داد.<br />
+                    رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
+                    رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
+                  </p>
+                  <div class="news-link">
+                    <div class="gray-logo">
+                      <img src="./assets/svg/brand-logo-gray.svg" />
+                    </div>
+                    <a href="https://www.news.ir/">
+                      <p>www.news.ir</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="firstnews-container-img">
+                  <img
+                    src="./assets/image/129-costco-site-size-2 1 (1).png"
+                    class="img"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div class="news-img">
-            <a href="https://www.news.ir/">
-              <img
-                src="./assets/image/129-costco-site-size-2 1 (1).png"
-                -cont
-              />
-            </a>
-          </div>
-        </div>
-        <div class="second-container">
-          <div class="second-text">
-            <p class="text">2.</p>
-            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
-            <p class="text2">12 بهمن ماه 1402</p>
-            <p class="text2">
-              مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
-              آمریکایی برای اخراج برخی از کارکنان خود در سال جاری میلادی خبر
-              داد.<br />
-              رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
-              رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
-            </p>
-            <div class="news-link">
-              <div class="gray-logo">
-                <img src="./assets/svg/brand-logo-gray.svg" />
-              </div>
-              <a href="https://www.news.ir/">
-                <p>www.news.ir</p>
-              </a>
-            </div>
-          </div>
-          <div class="news-img">
-            <a href="https://www.news.ir/">
-              <img
-                src="./assets/image/129-costco-site-size-2 1 (1).png"
-                class="img"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="third-container">
-          <div class="third-text">
-            <p class="text">3.</p>
-            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
-            <p class="text2">12 بهمن ماه 1402</p>
-            <p class="text2">
-              مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
-              آمریکایی برای اخراج برخی از کارکنان خود در سال جاری میلادی خبر
-              داد.<br />
-              رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
-              رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
-            </p>
-            <div class="news-link">
-              <div class="gray-logo">
-                <img src="./assets/svg/brand-logo-gray.svg" />
-              </div>
-              <a href="https://www.news.ir/">
-                <p>www.news.ir</p>
-              </a>
-            </div>
-          </div>
-          <div class="news-img">
-            <a href="https://www.news.ir/">
-              <img
-                src="./assets/image/129-costco-site-size-2 1 (1).png"
-                class="img"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="fourth-container">
-          <div class="fourth-text">
-            <p class="text">4.</p>
-            <h3 class="header">کاستکو و دغدغه‌هایی از جنس کارمندان</h3>
-            <p class="text2">12 بهمن ماه 1402</p>
-            <p class="text2">
-              مدیرعامل رستوران‌های زنجیره‌ای «مک‌دونالد» از برنامه این شرکت
-              آمریکایی برای اخراج برخی از کارکنان خود در سال جاری میلادی خبر
-              داد.<br />
-              رسانه‌ها با استناد به نامه‌ای از کریس کمپچینسکی، مدیرعامل
-              رستوران‌های زنجیره‌ای مک‌دونالد، گزارش دادند...
-            </p>
-            <div class="news-link">
-              <div class="gray-logo">
-                <img src="./assets/svg/brand-logo-gray.svg" />
-              </div>
-              <a href="https://www.news.ir/">
-                <p>www.news.ir</p>
-              </a>
-            </div>
-          </div>
-          <div class="news-img">
-            <a href="https://www.news.ir/">
-              <img
-                src="./assets/image/129-costco-site-size-2 1 (1).png"
-                class="img"
-              />
-            </a>
-          </div>
+          <div class="spacer"></div>
         </div>
       </div>
     </section>
@@ -205,7 +231,9 @@
     <section class="about-us">
       <div class="description-container">
         <div class="right-border">
-          <h1>درباره ما</h1>
+          <a href="./html/aboutus.html">
+            <h1>درباره ما</h1>
+          </a>
           <div class="more">
             <p>بیشتر بدانید</p>
             <div class="circle">
@@ -251,23 +279,45 @@
         <img src="assets/svg/brand-logo-gray.svg" class="logo-img" />
       </div>
 
-      <div class="swiper mySwiper swiper-mobile">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/image/سکشن دوم صفحه نخست-1.jpg" alt="Slide 1" />
+      <div class="aboutus-retail-awards">
+        <div class="swiper mySwiper swiper-mobile" style="overflow-x: hidden">
+          <div class="swiper-wrapper" style="height: auto">
+            <div class="swiper-slide">
+              <img
+                src="./assets/image/سکشن دوم صفحه نخست-1.jpg"
+                alt="Slide 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/image/سکشن دوم صفحه نخست-2.jpg"
+                alt="Slide 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/image/سکشن دوم صفحه نخست-3.jpg"
+                alt="Slide 3"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/image/سکشن دوم صفحه نخست-4.jpg"
+                alt="Slide 4"
+              />
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/سکشن دوم صفحه نخست-2.jpg" alt="Slide 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/سکشن دوم صفحه نخست-3.jpg" alt="Slide 3" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/سکشن دوم صفحه نخست-4.jpg" alt="Slide 4" />
+          <div class="arrows">
+            <div class="arrrow-btn">
+              <div class="about-next" onclick="aboutusenext()">
+                <img src="./assets/svg/right-arrow.svg" />
+              </div>
+              <div class="about-prev" onclick="aboutuseprev()">
+                <img src="./assets/svg/left-arrow.svg" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="swiper-button-next about-next"></div>
-        <div class="swiper-button-prev about-prev"></div>
       </div>
     </section>
 
@@ -313,20 +363,16 @@
               </p>
             </div>
             <div class="swiper-slide">
-              <p onclick="togglePoster4()" class="detail">
-                IRAN RETAIL SHOW 2021
-              </p>
-            </div>
-            <div class="swiper-slide">
-              <p onclick="togglePoster5()" class="detail">
+              <p onclick="togglePoster3()" class="detail">
                 IRAN RETAIL SHOW 2021
               </p>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next" style="color: white"></div>
+          <div class="swiper-button-prev" style="color: white"></div>
         </div>
       </div>
+
       <div class="poster-modal" id="poster"></div>
       <div class="poster-modal2" id="poster2"></div>
       <div class="poster-modal3" id="poster3"></div>
@@ -393,8 +439,14 @@
                 <img src="./assets/image/2023.jpg" class="award-img" />
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="arrrow-btn2">
+              <div class="awards-next" onclick="awardsNext()">
+                <img src="./assets/svg/right-arrow.svg" />
+              </div>
+              <div class="awards-prev" onclick="awardssPrev()">
+                <img src="./assets/svg/left-arrow.svg" />
+              </div>
+            </div>
           </div>
 
           <div class="awards-header">
@@ -436,8 +488,29 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="arrrow-btn">
+              <div
+                class="swiper-button-next awards-next about-next"
+                style="
+                  --swiper-navigation-size: 10px;
+                  color: white;
+                  width: 30.692px;
+                  height: 30px;
+                "
+                onclick="aboutusenext()"
+              ></div>
+              <div
+                class="swiper-button-prev awards-prev about-next"
+                onclick="aboutuseprev()"
+                style="
+                  --swiper-navigation-size: 10px;
+                  color: white;
+                  width: 30.692px;
+                  height: 30px;
+                  position: absolute;
+                "
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -475,9 +548,49 @@
               <img src="./assets/image/Group 479 (1).png" alt="Image 5" />
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="arrows-pagination">
+            <div class="arrrow-btn3">
+              <div class="mahnameh-next">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffcb05"
+                  height="10px"
+                  width="10px"
+                  version="1.1"
+                  id="Layer_1"
+                  viewBox="0 0 330.002 330.002"
+                  xml:space="preserve"
+                >
+                  <path
+                    id="XMLID_226_"
+                    d="M233.252,155.997L120.752,6.001c-4.972-6.628-14.372-7.97-21-3c-6.628,4.971-7.971,14.373-3,21  l105.75,140.997L96.752,306.001c-4.971,6.627-3.627,16.03,3,21c2.698,2.024,5.856,3.001,8.988,3.001  c4.561,0,9.065-2.072,12.012-6.001l112.5-150.004C237.252,168.664,237.252,161.33,233.252,155.997z"
+                  />
+                </svg>
+              </div>
+              <div class="mahnameh-pagination"></div>
+              <div class="mahnameh-prev">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffcb05"
+                  height="10px"
+                  width="10px"
+                  version="1.1"
+                  id="Layer_1"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                >
+                  <path
+                    id="XMLID_92_"
+                    d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001  l-150,150.004C76.58,157.211,75,161.026,75,165.004c0,3.979,1.581,7.794,4.394,10.607l150,149.996  C232.322,328.536,236.161,330,240,330s7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L111.213,165.004z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -538,6 +651,8 @@
       </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

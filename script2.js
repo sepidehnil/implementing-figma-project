@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".scroll");
+
+  if (window.scrollY > 0) {
+    header.classList.add("header-scrolleded");
+  } else {
+    header.classList.remove("header-scrolleded");
+  }
+});
+/////////////////////////
 const video = document.getElementById("myVideo");
 const playVideoButton = document.querySelector(".palyVideo");
 
@@ -46,9 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ////////////////////////////////////searchbtn
 const searchWrapper = document.querySelector(".search");
+
 function closebtn3() {
   searchWrapper.innerHTML = "";
 }
+
 function toggleSearch() {
   searchWrapper.innerHTML = `
     <div class="search-wrapper">
@@ -62,7 +74,6 @@ function toggleSearch() {
             <input type="text" id="searchInput" placeholder="جستجو کنید" />
             <img src="../assets/svg/search.svg" onclick="performSearch()" />
           </div>
-
         <div id="searchResults"></div>
       </div>
     </div>`;
@@ -78,20 +89,20 @@ function performSearch() {
 
     // Search the current page
     resultsFound =
-      searchInDocument(document, query, resultsContainer) || resultsFound; ///if the search result found return true
+      searchInDocument(document, query, resultsContainer) || resultsFound;
 
     // Search linked HTML files
-    const linkedHtmlFiles = ["../html/aboutus.html", ".,/html/contactus.html"]; // Add your linked HTML files here
+    const linkedHtmlFiles = ["../html/aboutus.html", "../html/contactus.html"]; // Add your linked HTML files here
     linkedHtmlFiles.forEach((file) => {
       fetch(file)
-        .then((response) => response.text()) //This converts the response to text (HTML content).
+        .then((response) => response.text())
         .then((html) => {
           const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html"); //Parses the HTML string into a DOM document, allowing for DOM manipulation and querying.
-          console.log(doc);
+          const doc = parser.parseFromString(html, "text/html");
           resultsFound =
             searchInDocument(doc, query, resultsContainer, file) ||
             resultsFound;
+
           // If no results found after checking all documents, ensure resultsContainer remains empty
           if (!resultsFound && resultsContainer.innerHTML === "") {
             resultsContainer.innerHTML = `<p class="notfound">با عرض پوزش مطلبی پیدا نشد.<br />واژه دیگری را جستجو نمایید.</p>`; // No results to show
@@ -102,21 +113,27 @@ function performSearch() {
 }
 
 function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
-  const paragraphs = doc.querySelectorAll("p"); //as an array
-  console.log(paragraphs);
+  const paragraphs = doc.querySelectorAll("p");
   let resultsFound = false;
+  let count = 0; // To limit the number of results
 
   paragraphs.forEach((paragraph) => {
-    if (paragraph.textContent.toLowerCase().includes(query)) {
+    if (count < 3 && paragraph.textContent.toLowerCase().includes(query)) {
+      count++;
       const resultDiv = document.createElement("div");
       resultDiv.classList.add("result");
 
-      const snippet = paragraph.textContent.replace(
+      let snippetText = paragraph.textContent.substring(0, 30);
+      if (paragraph.textContent.length > 30) {
+        snippetText += "...";
+      }
+
+      const snippet = snippetText.replace(
         new RegExp(query, "gi"),
         (match) => `<span class="highlight">${match}</span>`
       );
+
       resultDiv.innerHTML = `<p>${snippet}</p>`;
-      console.log(snippet);
 
       const showMoreLink = document.createElement("a");
       showMoreLink.classList.add("showMoreLink");
@@ -128,7 +145,6 @@ function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
             </div>`;
       showMoreLink.href = "#";
       showMoreLink.addEventListener("click", () => {
-        console.log(fileUrl);
         if (fileUrl) {
           window.location.href = `${fileUrl}#${paragraph.id}`;
         } else {
@@ -144,7 +160,8 @@ function searchInDocument(doc, query, resultsContainer, fileUrl = "") {
 
   return resultsFound;
 }
-////////////////////////////////////////
+
+////////////////////////////////////////sidebar-menu
 const sidebarMenu = document.getElementById("sidebar-container");
 function togglemenu() {
   sidebarMenu.innerHTML = `<div class="sidebar">
@@ -203,38 +220,25 @@ function togglemenu() {
 function closebtn() {
   sidebarMenu.innerHTML = "";
 }
-////////////////////////////////
+////////////////////////////////image1
 const swiper2 = new Swiper(".mySwiper2", {
   rewind: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".arrow-image1",
+    prevEl: ".prevbtn--image1",
   },
-});
-const progressRect = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var mySwiper2 = new Swiper(".mySwiper2", {
-  spaceBetween: 30,
-  centeredSlides: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressRect.style.setProperty("--progress", progress);
-      progressContent.textContent = "";
-    },
-  },
 });
+function imageNext() {
+  swiper2.slideNext();
+}
+function imagePrev() {
+  swiper2.slidePrev();
+}
+
 //////////////////////(/////////modal
 const modal = document.getElementById("modal-wrapper");
 function profiletoggle() {
@@ -327,3 +331,26 @@ const mySwiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//////////////////////////////////aboutuse-awards
+document.addEventListener("DOMContentLoaded", function () {
+  swiper = new Swiper(".swiper-btns-awards", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".awards-next",
+      prevEl: ".awards-prev",
+    },
+  });
+});
+
+function nextawardClick() {
+  console.log("afd");
+  swiper.slideNext();
+}
+
+function prevawardClick() {
+  console.log("ef");
+  swiper.slidePrev();
+}

@@ -8,6 +8,7 @@
 .retail-awards-description {
   text-align: justify;
   width: 90%;
+  position: relative;
 }
 .right-border {
   margin-bottom: 30px;
@@ -63,6 +64,7 @@
   width: 50%;
   margin: 0;
   height: 500px;
+  position: relative;
 }
 .slide {
   gap: 10px;
@@ -86,6 +88,7 @@
   font-size: 14px;
   font-weight: 400;
   margin-left: 20px;
+  margin-bottom: 50px;
 }
 .description-text h1 {
   margin-bottom: 15px;
@@ -107,7 +110,40 @@
 .swiper-mobile {
   display: none;
 }
-
+.arrrow-btn2 {
+  display: flex;
+  gap: 7px;
+  position: absolute;
+  bottom: 0;
+  right: 33%;
+}
+.awards-next {
+  width: 36px;
+  height: 35.692px;
+  border-radius: 0px 15px 15px 0px;
+  background: rgba(207, 182, 44, 0.49);
+  z-index: 1000;
+  position: relative;
+}
+.awards-next img,
+.awards-prev img {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.awards-next:hover,
+.awards-prev:hover:hover {
+  background-color: #cfb62c;
+}
+.awards-prev {
+  width: 36px;
+  height: 35.692px;
+  border-radius: 15px 0px 0px 15px;
+  background: rgba(207, 182, 44, 0.49);
+  z-index: 1000;
+  position: relative;
+}
 @media only screen and (max-width: 680px) {
   .retail-awards {
     margin: 40px 0;

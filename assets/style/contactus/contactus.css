@@ -7,6 +7,14 @@ header {
   width: 90%;
   margin: auto;
   height: 125px;
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 100000000;
+}
+.header-scrolleded {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .description-wrapper {
   display: flex;
